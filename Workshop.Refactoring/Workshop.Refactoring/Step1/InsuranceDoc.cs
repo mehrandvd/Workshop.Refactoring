@@ -4,9 +4,9 @@
     {
         public virtual int Id { get; set; }
         public virtual string Code { get; set; }
-        public virtual long? InitPrice { get; set; }
-        public virtual long? TotalPrice { get; set; }
-        public double Tavarom { get; set; }
+        public virtual double? InitPrice { get; set; }
+        public virtual double? TotalPrice { get; set; }
+        public double Discount { get; set; }
 
 
         public virtual long? MonthDuration { get; set; }
@@ -15,16 +15,16 @@
 
         public virtual void Calculate()
         {
-            //LoadInitDataFromDb();
+            //LoadScore();
 
-            TotalPrice = InitPrice*MonthDuration;
-            
+            TotalPrice = (InitPrice*MonthDuration)*(1 - Discount);
+
             //IsCaclulated = true;
         }
 
-        private void LoadInitDataFromDb()
+        private void LoadScore()
         {
-            Tavarom = .23;
+            Discount = .2;
         }
 
     }
