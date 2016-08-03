@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Workshop.Refactoring.Step2;
+using Workshop.Refactoring;
 
 namespace Workshop.Refactoring.Step3
 {
