@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Workshop.Refactoring.Step2
+namespace Workshop.Refactoring
 {
     public class InsuranceDoc
     {

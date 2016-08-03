@@ -1,8 +1,13 @@
-﻿namespace Workshop.Refactoring.Step1
+﻿namespace Workshop.Refactoring
 {
-    public class InsuranceDoc
+    public class InsuranceDocSimple
     {
         public virtual int Id { get; set; }
+    }
+
+    public class CarInsuranceDocSimple : InsuranceDocSimple
+    {
+        #region To move up
         public virtual string Code { get; set; }
         public virtual double? InitPrice { get; set; }
         public virtual double? TotalPrice { get; set; }
@@ -17,7 +22,7 @@
         {
             //LoadScore();
 
-            TotalPrice = (InitPrice*MonthDuration)*(1 - Discount);
+            TotalPrice = (InitPrice * MonthDuration) * (1 - Discount);
 
             //IsCaclulated = true;
         }
@@ -27,20 +32,19 @@
             Discount = .2;
         }
 
-    }
+        #endregion
 
-    public class CarInsuranceDoc : InsuranceDoc
-    {
+
         public virtual long? FixedPrice { get; set; }
-        public override void Calculate()
-        {
-            TotalPrice = ( InitPrice + FixedPrice)  * MonthDuration;
-        }
+        //public override void Calculate()
+        //{
+        //    TotalPrice = ( InitPrice + FixedPrice)  * MonthDuration;
+        //}
     }
 
-    public class HouseInsuranceDoc : InsuranceDoc
+    public class HouseInsuranceDocSimple : InsuranceDocSimple
     {
-        
+        public int HousePrice { get; set; }
     }
 }
 
