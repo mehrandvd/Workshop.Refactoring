@@ -43,14 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lambda\LambdaTutorial.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Step1\InsuranceDoc.cs" />
-    <Compile Include="Step2\InsuranceDoc.cs" />
-    <Compile Include="Step3\AssuranceAgent.cs" />
+    <Compile Include="SimpleInhertance\InsuranceDocSimple.cs" />
+    <Compile Include="TechnicalInheritance\InsuranceDoc.cs" />
+    <Compile Include="Covariant\AssuranceAgent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="SimpleInhertance\ClassDiagramSimple.cd" />
+    <None Include="TechnicalInheritance\ClassDiagramTechnical.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
